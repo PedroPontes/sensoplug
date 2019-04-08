@@ -16,5 +16,5 @@
 		}
 	}
 
-	email.onchange = () => email.toggleAttribute("error", false);
+	email.oninput = () => email.toggleAttribute("error", false);
 })()

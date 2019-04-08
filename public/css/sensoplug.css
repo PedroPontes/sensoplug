@@ -5,3 +5,12 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.form-control:focus {
+	border-color: #0062cc;
+	box-shadow: 0 0 0 0.2rem rgba(0, 98, 204, 0.25);
+}
+
+#form-email[error] {
+	border-color: red;
+}
