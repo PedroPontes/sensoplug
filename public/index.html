@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<style>
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-</style>
-
-
 <head>
 
   <meta charset="utf-8">
@@ -33,6 +21,10 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
+  <link hred="css/sensoplug.css" rel="stylesheet">
+
+  <!-- custom defered script -->
+  <script type="text/javascript" src="js/postMail.js" defer></script>
 
 </head>
 
@@ -87,7 +79,7 @@
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">Ever wondered what is consuming the most energy in your house?</h2>
           <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">Our team is developing a product that will simplify energy management for you. You'll be able to have a detailed description of the consumption of your appliances, estimate how much are 
+          <p class="text-white-50 mb-4">Our team is developing a product that will simplify energy management for you. You'll be able to have a detailed description of the consumption of your appliances, estimate how much are
 they costing you and get suggestions on where to save.</p>
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#contact">I want to know more!</a>
         </div>
@@ -133,7 +125,7 @@ they costing you and get suggestions on where to save.</p>
     </div>
   </section>-->
 
-  <!-- Portfolio Section 
+  <!-- Portfolio Section
   <section id="portfolio">
     <div class="container-fluid p-0">
       <div class="row no-gutters">
@@ -219,15 +211,15 @@ they costing you and get suggestions on where to save.</p>
     </div>
   </section>-->
 
-  <!-- Call to Action Section--> 
+  <!-- Call to Action Section-->
   <section class="page-section bg-dark text-white">
     <div class="container text-center">
       <h2 class="mb-4">We'd like to know more about your experience managing electricity. If you could have your feedback</h2>
       <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Tell us more</a>
     </div>
   </section>
-  
-  
+
+
   <!-- Contact Section -->
 
    <section class="page-section" id="contact">
@@ -235,17 +227,17 @@ they costing you and get suggestions on where to save.</p>
 		<h2 class="mt-0">Let's Get In Touch!</h2>
 		<hr class="divider my-4">
 		<p class="text-muted mb-5">Interested in our product? Subscribe to our newsletter and we'll let you know when you can get it.</p>
-		
-		<form id="contact-form" method="post" action="mailinglist.php" role="form" class="text-center border border-light p-10">
-			<div class="form-group"> 
-				<input type="email" class="form-control" id="email_id" name="email" placeholder="Your email here">
+
+		<form id="contact-form" class="text-center border border-light p-10">
+			<div class="form-group">
+				<input type="email" class="form-control" id="form-email" name="email" placeholder="Your email here">
 			</div>
-			
-			<div class="form-group"> 
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</div>	
+
+			<div class="form-group">
+				<button type="submit" class="submit btn btn-primary">Submit</button>
+			</div>
 		</form>
-		
+
 	</div>
   </section>
 
