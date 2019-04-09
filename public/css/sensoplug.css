@@ -16,8 +16,8 @@
 }
 
 section.fullimage {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 72px);
+  padding-top: 0rem;
+  padding-bottom: calc(0rem - 72px);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
