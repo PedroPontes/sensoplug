@@ -1,20 +1,24 @@
 (() => {
 	const mailForm = document.getElementById("contact-form");
-	const email = document.getElementById("form-email");
+	const emailInput = document.getElementById("form-email");
 	const submit = mailForm.querySelector(".submit");
 
 	submit.onclick = (event) => {
 		event.preventDefault();
-		email.value;
-		if (email.checkValidity()) {
-			fetch("subscribe", {
+		const email = emailInput.value;
+		if (email && emailInput.checkValidity()) {
+			fetch("/subscribe", {
 	          method: 'post',
+	          headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
 	          body: JSON.stringify({ email })
 	        });
 		} else {
-			email.toggleAttribute("error", true);
+			emailInput.toggleAttribute("error", true);
 		}
 	}
 
-	email.oninput = () => email.toggleAttribute("error", false);
+	emailInput.oninput = () => emailInput.toggleAttribute("error", false);
 })()

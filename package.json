@@ -1,0 +1,23 @@
+{
+  "name": "sensoplug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PupoSDC/sensoplug.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/PupoSDC/sensoplug/issues"
+  },
+  "homepage": "https://github.com/PupoSDC/sensoplug#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.0"
+  }
+}
