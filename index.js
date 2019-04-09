@@ -43,7 +43,7 @@ app.post('/subscribe', (req, res) => {
 });
 
 // Connect to DataBase
-mongoose.connect('mongodb://localhost/sensoplug', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/sensoplug', { useNewUrlParser: true });
 mongoose.promise = global.Promise;
 
 // Start server
