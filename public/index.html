@@ -18,6 +18,7 @@
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
@@ -231,6 +232,8 @@ they costing you and get suggestions on where to save.</p>
 		<form id="contact-form" class="text-center border border-light p-10">
 			<div class="form-group">
 				<input type="email" class="form-control" id="form-email" name="email" placeholder="Your email here">
+        <div class="error" id="form-email-error"></div>
+        <div class="success" id="form-email-success"></div>
 			</div>
 
 			<div class="form-group">

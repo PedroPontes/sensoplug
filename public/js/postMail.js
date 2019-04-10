@@ -1,24 +1,29 @@
 (() => {
-	const mailForm = document.getElementById("contact-form");
-	const emailInput = document.getElementById("form-email");
-	const submit = mailForm.querySelector(".submit");
+  const mailForm = document.getElementById("contact-form");
+  const emailInput = document.getElementById("form-email");
+  const errorMessage = document.getElementById("form-email-error");
+  const submit = mailForm.querySelector(".submit");
+  const successMessage = document.getElementById("form-email-success");
 
-	submit.onclick = (event) => {
-		event.preventDefault();
-		const email = emailInput.value;
-		if (email && emailInput.checkValidity()) {
-			fetch("/subscribe", {
-	          method: 'post',
-	          headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-              },
-	          body: JSON.stringify({ email })
-	        });
-		} else {
-			emailInput.toggleAttribute("error", true);
-		}
-	}
+  submit.onclick = async (event) => {
+    try {
+      event.preventDefault();
+      const email = emailInput.value;
+      if (!email || !emailInput.checkValidity()) {
+        throw "Invalid e-mail!";
+      }
+      const request = await axios.post('/subscribe', { email });
+      successMessage.innerHTML = "Thank you for subscribing!";
+    } catch (error) {
+      emailInput.toggleAttribute("error", true);
+      successMessage.innerHTML = "";
+      errorMessage.innerHTML = error.response ? error.response.data.error : error;
+    }
+  }
 
-	emailInput.oninput = () => emailInput.toggleAttribute("error", false);
+  emailInput.oninput = () => {
+    emailInput.toggleAttribute("error", false);
+    errorMessage.innerHTML = "";
+    successMessage.innerHTML = "";
+  }
 })()

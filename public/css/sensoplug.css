@@ -14,3 +14,11 @@
 #form-email[error] {
 	border-color: red;
 }
+
+.error {
+	color: var(--red);
+}
+
+.success {
+	color: var(--blue);
+}
