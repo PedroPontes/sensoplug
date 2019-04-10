@@ -15,10 +15,20 @@
 	border-color: red;
 }
 
+<<<<<<< HEAD
 .error {
 	color: var(--red);
 }
 
 .success {
 	color: var(--blue);
+=======
+section.fullimage {
+  padding-top: 0rem;
+  padding-bottom: calc(0rem - 72px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+>>>>>>> 6be809c4d09efed42d012bd206238ca11bd6e0af
 }
