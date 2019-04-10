@@ -23,8 +23,7 @@
 	color: var(--blue);
 
 section.fullimage {
-  padding-top: 0rem;
-  padding-bottom: calc(0rem - 72px);
+  padding-bottom: 72px;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
